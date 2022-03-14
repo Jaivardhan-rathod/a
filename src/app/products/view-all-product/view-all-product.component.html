@@ -1,0 +1,29 @@
+ <!-- Section-->
+ <section class=" padding-bottom: 3rem" > 
+        <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center container px-4 px-lg-5 mt-5" *ngIf="productList.length>0">
+            <div class="col mb-5" *ngFor="let pro of productList">
+                <div class="card h-98%">
+                    <!-- Product image-->
+                    <img class="card-img-top" src={{pro.productImg}} alt="Product Image" width="900" height="300"/>
+                    <!-- Product details-->
+                    <div class="card-body p-4 text-center">                       
+                            <!-- Product name-->
+                            <h5 class="fw-bolder">
+                                <a routerLink="view-product/{{pro.productid}}">{{pro.productName}}|{{pro.productid}}</a>
+                            </h5>
+                            <!-- Product description-->
+                            <p>{{pro.description}}</p>
+                            <br>
+                            <!-- Product price-->
+                            ${{pro.price}}
+                            <br>
+                            <!-- <div class="card-footer p-4 pt-0 border-top-0 bg-transparent" >               -->
+                                <small >Rating: {{pro.rating}} star</small>
+                             <br>
+                                <a class="btn btn-outline-dark mt-auto" routerLink="view-product/{{pro.productid}}">View options</a>                           
+                            <!-- </div>                       -->
+                    </div>                                      
+                </div>
+            </div>
+        </div>  
+</section>

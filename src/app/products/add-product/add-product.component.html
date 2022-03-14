@@ -1,0 +1,83 @@
+<p>add-product works!</p>
+<div style="border: 5px solid rgb(144, 174, 230);">
+    <h2 class="bg-light text-center"  >Add New Product</h2>
+</div>
+<div class="bg-light mb-4" style="border: 5px solid rgb(144, 174, 230); padding-left: 64px; padding-top: 16px; padding-bottom: 9px;">
+<form (submit)="addNewProduct(addProductForm)" #addProductForm="ngForm"  class="row g-3 ">
+
+
+    <div class="col-ld-4" style="display: flex;">
+      
+        <label for="validationServer01" class="form-label" style="padding-right: 10px; margin-top: 5px;">Product Name</label>
+        <input type="text" class="form-control " id="validationServer01" style="width: max-content; height: 40px;" placeholder="Enter Product Name" required name="product_name" ngModel>
+      
+     
+        <label for="validationServer02" class="form-label" style="width: 150px; padding-left: 50px;margin-top: 5px;">Category Id</label>
+        <input type="text" class="form-control " id="validationServer02" style="width: max-content; height: 40px;" placeholder="Enter Category Id" required name="product_category" ngModel> 
+     
+    </div>
+<br>
+        <div class="col-ld-4 " style="display: flex;">
+            <label for="validationServer02" class="form-label" style="width: 112px; padding-left: 2px;margin-top: 5px;">Product Id</label>
+            <input type="text" class="form-control " id="validationServer02" style="width: max-content; height: 40px;" placeholder="Enter Product Id" required name="product_Id" ngModel>
+
+            <label for="validationServer01" class="form-label" style="width: 150px;padding-left: 50px;margin-top: 5px;">Product Color</label>
+            <input type="text" class="form-control" id="validationServer01" style="width: max-content; height: 40px;" placeholder="Enter Product color" required name="product_color" ngModel>
+        </div>
+
+        <div class="col-ld-4 " style="display: flex;">
+            <label for="validationServer01" class="form-label" style="padding-right: 10px; padding-left: 2px; margin-top: 5px;">Product Price</label>
+            <input type="text" class="form-control" id="validationServer01" style="width: max-content; height: 40px;" placeholder="Enter Product Price" required name="product_price" ngModel>
+        </div>
+   
+ 
+
+  <div class="col-ld-6 mb-3">
+    <label style="padding-right: 10px;  margin-top: 5px;">Rating</label>
+        <select class="custom-select" required name="product_rating" ngModel >
+            <option selected value="">Choose</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+
+    <label for="validationServer02" style="padding-right: 10px; padding-left: 90px; margin-top: 5px;">Is Availabel</label>
+        <select class="custom-select" required name="product_available" ngModel> 
+            <option selected value="" >Choose</option>
+            <option value="Yes">Yes </option> 
+            <option value="No">No</option>
+        </select>
+
+    <label style="padding-right: 10px; padding-left: 90px; margin-top: 5px;">Reviews</label>
+        <select class="custom-select" required name="product_review" ngModel >
+            <option selected value="">Choose</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+          
+  </div>
+
+<!------------------------------------------------------------------------------------------->
+
+
+<div class="col-md-6">
+  <label for="validationServer03" class="form-label">Description</label>
+  <textarea type="text" class="form-control" style="height: 195px; width: 816px" placeholder="Enter Product Description" required name="product_description" ngModel></textarea>  
+<br>
+  
+</div>
+
+
+<!------------------------------------------------------------------------------------------->
+  <div style="padding-bottom: 10px; ">
+    <button class="btn btn-primary"  type="submit">Submit form</button>
+  </div>
+
+</form>
+</div>
+<!------------------------------------------------------------------------------------------->

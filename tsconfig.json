@@ -19,7 +19,9 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    //remove this line
+    "strictPropertyInitialization": false
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
