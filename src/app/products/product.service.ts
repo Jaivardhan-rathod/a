@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Product } from './product';
 import { Observable } from 'rxjs';
 import { category } from '../site-layout/category';
+import{map}from'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -13,10 +14,10 @@ export class ProductService {
  
   constructor(private httpClient:HttpClient) { }
 
-  addProduct(productBody:any):Observable<Product>
+  addProduct(product:Product):Observable<Product>
   {
     const baseUrl="http://localhost:3000/product";
-    return this.httpClient.post<Product>(baseUrl, productBody)
+    return this.httpClient.post<Product>(baseUrl, product)
   }
   
 
@@ -44,9 +45,9 @@ export class ProductService {
     
    }
 
-   deleteProduct(productID: any):Observable<Product>{
-    const baseUrl="http://localhost:3000/product/"+productID;
-    return this.httpClient.delete<Product>(baseUrl)
+   deleteProduct(jai: any):Observable<Product>{
+    const baseUrl="http://localhost:3000/product/"+jai;
+    return this.httpClient.delete<Product>(baseUrl) //.pipe(map((res:any)=>{return res;}))
     
    }
 

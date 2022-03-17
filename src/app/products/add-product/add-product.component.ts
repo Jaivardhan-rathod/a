@@ -20,6 +20,7 @@ export class AddProductComponent implements OnInit {
 
     let newProduct =
     {
+      id: form.value.product_Id,
       productid:form.value.product_Id,
       categoryId:form.value.product_category,
       productName:form.value.product_name,

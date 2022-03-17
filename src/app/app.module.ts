@@ -7,11 +7,15 @@ import { OrdersModule } from './orders/orders.module';
 import { SiteLayoutModule } from './site-layout/site-layout.module';
 import { FormsModule } from '@angular/forms';
 import { CartComponent } from './cart/cart/cart.component';
+import { LoginComponent } from './login/login/login.component';
+import { DashboardComponent } from './login/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CartComponent
+    CartComponent,
+    LoginComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

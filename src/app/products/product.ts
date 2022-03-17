@@ -1,11 +1,12 @@
 export interface Product {
-
-    productid:string;
-    categoryId:string;
+    
+    id:number;
+    productid:number;
+    categoryId:number;
     productName:string;
     description:string;
     rating:string;
-    price:string;
+    price:number;
     productImg:string;
     isavailable:string;
     color:string;

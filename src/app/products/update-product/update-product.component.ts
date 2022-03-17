@@ -27,7 +27,8 @@ export class UpdateProductComponent implements OnInit {
     
     
     const updateProduct ={
-      id:form.value.id,
+      id:form.value.product_Id,
+      productid:form.value.product_Id,
       categoryId:form.value.product_category,
       productName:form.value.product_name,
       description:form.value.product_description,
@@ -39,7 +40,7 @@ export class UpdateProductComponent implements OnInit {
       review:form.value.product_review
     };
 
-    console.log(updateProduct);
+    console.log("updateProduct",updateProduct);
     this.productService.updateProduct(this.productID,updateProduct).subscribe(data => {console.log(data)});
 
 
