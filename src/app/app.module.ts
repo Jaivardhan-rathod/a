@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { OrdersModule } from './orders/orders.module';
 import { SiteLayoutModule } from './site-layout/site-layout.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CartComponent } from './cart/cart/cart.component';
 import { LoginComponent } from './login/login/login.component';
 import { DashboardComponent } from './login/dashboard/dashboard.component';
@@ -23,7 +23,8 @@ import { DashboardComponent } from './login/dashboard/dashboard.component';
     HttpClientModule,
     OrdersModule,
     SiteLayoutModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   
   providers: [],

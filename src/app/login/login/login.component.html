@@ -2,7 +2,7 @@
 
 
     
-<main class="form-signin">
+<!-- <main class="form-signin">
   <form>
     <img class="mb-4" src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
     <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
@@ -24,7 +24,34 @@
     <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
     <p class="mt-5 mb-3 text-muted">© 2017–2021</p>
   </form>
-</main>
+</main> -->
+
+<div class="container">
+  <div class="row">
+  <div class="col-md-6">
+  <div class="card">
+  <div class="text-center">
+  <h1>Restaurant Login</h1><hr>
+  </div>
+  <form [formGroup]="loginForm" (ngSubmit)="logIn()">
+    <div class="mb-3">
+    <label class="form-label">Email address</label>
+    <input type="text" formControlName="email" placeholder="Enter Email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div>
+    <label class="form-label">Password</label>
+    <input type="password" formControlName="password" placeholder="Enter Password" class="form-control" id="exampleInputPassword1">
+    </div>
+    <br>
+<button type="submit" class="btn btn-primary"> Login </button>
+</form><br>
+<a style ="color: blue; margin-top:10px ;" routerLink="/signup"> New User ?&nbsp; Click to Signup !</a>
+
+</div>
+</div>
+</div>
+</div>
+
 
 
 
